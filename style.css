@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+main {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Tùy chỉnh ảnh đại diện */
+.about-me img {
+    max-width: 150px;
+    border-radius: 50%; /* Làm ảnh tròn */
+    display: block;
+    margin: 10px auto;
+    border: 3px solid #35424a;
+}
+
+/* Phần chân trang (Footer) */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #35424a;
+    color: #ffffff;
+}
