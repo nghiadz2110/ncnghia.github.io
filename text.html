@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            background-color: rgb(255, 255, 255);
+            padding: 25px;
+            border: none;
+            border-radius: 8px;
+        }
+        label {
+            display: inline-block;
+            width: 120px;
+            margin-bottom: 10px;
+        }
+        label[for="contact-method"] {
+            width: auto;
+        }
+        input[type="text"], input[type="email"], input[type="date"], select {
+            padding: 5px;
+            width: 250px;
+            margin-bottom: 10px;
+        }
+        fieldset {
+            border: none;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        legend {
+            font-weight: bold;
+            color: #00a37d;
+        }
+        .submit-button {
+            background-color: #e0e0e0;
+            padding: 10px 15px;
+            border: 0px solid #aaa;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <img src="https://inkythuatso.com/uploads/thumbnails/800/2021/11/logo-iu-inkythuatso-01-25-10-20-36.jpg" alt="University Logo" width="200">
+
+        <h2>Survey</h2>
+        <p>If you have a moment, we'd appreciate it if you would fill out this survey.</p>
+
+        <form action="/submit-survey" method="post">
+            
+            <fieldset>
+                <legend>Your information:</legend>
+
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name">
+                <br>
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name">
+                <br>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <br>
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="date_of_birth">
+            </fieldset>
+
+            <fieldset>
+                <legend>How did you hear about us?</legend>
+                <input type="radio" id="search-engine" name="source" value="search_engine">
+                <label for="search-engine" style="width: auto;">Search engine</label>
+                
+                <input type="radio" id="word-of-mouth" name="source" value="word_of_mouth">
+                <label for="word-of-mouth" style="width: auto;">Word of mouth</label>
+                
+                <input type="radio" id="social-media" name="source" value="social_media">
+                <label for="social-media" style="width: auto;">Social Media</label>
+                
+                <input type="radio" id="other" name="source" value="other">
+                <label for="other" style="width: auto;">Other</label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Would you like to receive announcements about new CDs and special offers?</legend>
+                <input type="checkbox" id="like-offers" name="like_offers" value="yes">
+                <label for="like-offers" style="width: auto;">YES, I'd like that.</label>
+                <br>
+                <input type="checkbox" id="email-announcements" name="email_announcements" value="yes">
+                <label for="email-announcements" style="width: auto;">YES, please send me email announcements.</label>
+            </fieldset>
+
+            <label for="contact-method">Please contact me by:</label>
+            <select id="contact-method" name="contact_method">
+                <option value="email_or_postal">Email or postal mail</option>
+                <option value="email_only">Email only</option>
+                <option value="postal_only">Postal mail only</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit" class="submit-button">
+        </form>
+    </div>
+
+</body>
+</html>

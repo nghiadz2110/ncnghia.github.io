@@ -1,44 +1,127 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
+    background-color: #f0f0f0;
+}
+header img {
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 20px;
+    background-color: #fff;
+    border: 1px solid #999;
+}
+
+h2, h3, h4 {
+    font-family: Georgia, 'Arial', Times, serif;
+    color: #000000;
+}
+
+a {
+    color: #a52a2a;
 }
 header {
-    background-color: #35424a;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+    border-bottom: 2px solid #ffb23e;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    margin-right: 20px;
 }
 
 header h1 {
+    font-size: 2em;
     margin: 0;
+    color: #d3a7079a;
 }
+header h2 {
+    font-size: 1.3em;
+    margin: 0;
+    font-weight: normal;
+    color: #000000;
+}
+.main-layout {
+    display: flex; /* Key property: Enables the two-column Flexbox layout */
+}
+
 main {
-    width: 80%;
-    margin: 20px auto;
+    flex: 3; /* Main content takes up 3 parts of the available space */
+    padding: 15px;
+}
+aside h3 {
+    color: #333;      /* "Lecture notes" - Màu đen/xám đậm */
+    margin-top: 0;
+}
+
+aside h4 {
+    color: #933; /* "Event change...", "Lecture day..." - Màu nâu đỏ */
+}
+
+/* --- Màu riêng cho từng link diễn giả --- */
+main ul li:nth-child(1) a { /* David Brancaccio */
+    color: #777;
+    text-decoration: none; /* Bỏ gạch chân */
+}
+main ul li:nth-child(2) a { /* Andrew Ross Sorkin */
+    color: #777;
+    text-decoration: none; /* Bỏ gạch chân */
+}
+main ul li:nth-child(3) a { /* Amy Chua */
+    color: #c00; /* Màu đỏ */
+}
+main ul li:nth-child(4) a { /* Scott Sampson */
+    color: #a96f40; /* Màu cam/nâu */
+}
+main ul li:nth-child(5) a { /* Carlos Eire */
+    color: #c00; /* Màu đỏ */
+}
+main ul li:nth-child(6) a { /* Ronan Tynan */
+    color: #c00; /* Màu đỏ */
+}
+aside {
+    flex: 1; 
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #fdf1e2; /* Màu nền be/kem nhạt */
+    border-left: 1px solid #ccc;
+    color: #000000;
 }
 
-/* Tùy chỉnh ảnh đại diện */
-.about-me img {
-    max-width: 150px;
-    border-radius: 50%; /* Làm ảnh tròn */
-    display: block;
-    margin: 10px auto;
-    border: 3px solid #35424a;
+/* Kiểu cho tiêu đề chính "Lecture notes" */
+aside h3 {
+    color: #333; /* Màu xám rất đậm */
+    margin-top: 0;
 }
 
-/* Phần chân trang (Footer) */
+/* Kiểu cho các tiêu đề phụ màu nâu đỏ */
+aside h4 {
+    color: #7a0e00; /* Màu nâu đỏ */
+}
+
+/* --- Content Styling --- */
+main ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+main ul li {
+    margin-bottom: 0.5em;
+}
+
+.contact-info {
+    margin-top: 1em;
+}
+
 footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-    background-color: #35424a;
-    color: #ffffff;
+    text-align: right;
+    padding: 8px;
+    border-top: 1px solid #ccc;
+    font-size: 0.9em;
+    color: #000000;
 }
